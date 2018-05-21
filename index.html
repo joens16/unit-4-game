@@ -23,39 +23,42 @@
         <h1><strong>Dragon Ball Game</strong> <small><br/><strong id="dragon-to-life">Bring Dragon to Life</strong></small></h1>
     </div>
 
-    <div id="ballscontainer" class="row">
-        <div class="col-xs-6 col-md-3">
-          <a id="ball1" href="#" class="thumbnail">
-            <img src="assets/images/dragonball.jpg" alt="dragonball powers">
-          </a>
+      <div id="ballscontainer" class="row">
+          <div id="ball1Container" class="col-xs-6 col-md-3">
+            <a id="ball1" href="#" class="thumbnail">
+              <img src="assets/images/dragonball.jpg" alt="dragonball powers">
+            </a>
+          </div>
+          <div id="ball2Container" class="col-xs-6 col-md-3">
+              <a id="ball2" href="#" class="thumbnail">
+                <img src="assets/images/dragonball.jpg" alt="dragonball powers">
+              </a>
+            </div>
+            <div id="ball3Container" class="col-xs-6 col-md-3">
+              <a id="ball3" href="#" class="thumbnail">
+                <img src="assets/images/dragonball.jpg" alt="dragonball powers">
+              </a>
+            </div>
+            <div id="ball4Container" class="col-xs-6 col-md-3">
+              <a id="ball4" href="#" class="thumbnail">
+                <img src="assets/images/dragonball.jpg" alt="dragonball powers">
+              </a>
+            </div>
         </div>
-        <div class="col-xs-6 col-md-3">
-            <a id="ball2" href="#" class="thumbnail">
-              <img src="assets/images/dragonball.jpg" alt="dragonball powers">
-            </a>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <a id="ball3" href="#" class="thumbnail">
-              <img src="assets/images/dragonball.jpg" alt="dragonball powers">
-            </a>
-          </div>
-          <div class="col-xs-6 col-md-3">
-            <a id="ball4" href="#" class="thumbnail">
-              <img src="assets/images/dragonball.jpg" alt="dragonball powers">
-            </a>
-          </div>
+     
+
+      <div id="instructions" class="row">
+        <div class="col-md-12">
+            <p class="paragraph">You will be give a random number at the beginning.
+                By clicking on a Dragon Ball you will add points to your total score.
+                You will win the game by matching your total score to random number. you lose if your total score goes above the random number.
+                The value of each Bragon Ball is hidden from you until you click on it.
+                each time when the game starts, the value of each dragon Ball will change. 
+            </p>
+        </div>
       </div>
 
-      <div class="instructions">
-          <p class="paragraph">You will be give a random number at the beginning.
-              By clicking on a Dragon Ball you will add points to your total score.
-              You will win the game by matching your total score to random number. you lose if your total score goes above the random number.
-              The value of each Bragon Ball is hidden from you until you click on it.
-              each time when the game starts, the value of each dragon Ball will change. 
-          </p>
-      </div>
-
-      <div class="row">
+      <div class="row" id="scoreboard">
         <div class="col-md-3">
             <div class="panel panel-default">
                 <div  class="panel-heading">Wins</div>
@@ -90,10 +93,18 @@
         </div>
       </div>
 
+      <div class="row">
+          <div class="col-md-12">
+            <a id="dragonpiccontainer" href="#" class="thumbnail">
+              <img src="assets/images/dragon.jpg" alt="Dragon">
+            </a>
+          </div>
+        </div>
 
-      <div class="dragonpiccontainer">
+
+      <!-- <div class="dragonpiccontainer">
           <img src="assets/images/dragon.jpg" alt="Dragon" class="dragonpic">
-      </div>
+      </div> -->
 
 
 
