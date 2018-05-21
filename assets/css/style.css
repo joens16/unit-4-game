@@ -1,0 +1,56 @@
+.page-header {
+    background-color: orange;
+    text-align: center;
+    color: green;
+    padding-top: 5px;
+    margin-top: 0;
+    border: 5px black solid;
+}
+
+#dragon-to-life {
+    color: green;
+}
+
+#balls {
+    height: 100px;
+    width: 100px;
+    border: 5px black solid;
+}
+
+.row {
+    width: 47%;
+    margin-left: 10px;
+
+}
+
+.dragonpiccontainer {
+    float: right;
+    /* display: none; */
+    /* opacity: 0.2; */
+    margin-right: 20px;
+    width: 50%;
+    position: fixed;
+    bottom: 280px;
+    left: 700px;
+}
+
+.instructions {
+    width: 45%;
+    padding-left: 10px;
+    border: 5px black solid;
+    margin-left: 10px;
+}
+
+.paragraph {
+    font-weight: bold;
+}
+
+.list-group {
+    width: 45.5%;
+    padding-left: 10px;
+    margin-top: 30px;
+}
+
+#wins {
+    width: 10%;
+}
