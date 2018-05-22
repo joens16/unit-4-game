@@ -1,10 +1,10 @@
 // create variables: win, loss, your points, random number picked by pc, variable for each Dragon Ball
 
-var wins = 1;
+var wins = 0;
 var losses = 0;
 var yourPoints = 0;
 var computerNumber = 0;
-
+//Dragon Ball variables
 var dragonBall1 = 0;
 var dragonBall2 = 0;
 var dragonBall3 = 0;
@@ -14,47 +14,46 @@ var dragonBall4 = 0;
 function generateComputerNumber(){
     computerNumber = Math.floor(Math.random() * 101) + 19;
     $("#target").text(computerNumber);
+    // $("#dragonpiccontainer").css('visibility', 'hidden');
 }
 
 //Reset game and update HTML
 function reset(){
     yourPoints = 0;
-    $("myScore").text(yourPoints);
+    $("#myScore").text(yourPoints);
     computerNumber = 0;
+    $("#dragonpiccontainer").css('visibility', 'hidden');
+    
 }
 
 //Generate random #'s for each Dragon Ball (1-12)
 function startGame(){
-    
-    dragonBall1 = Math.floor(Math.random() * 12) + 1;
-    console.log(dragonBall1);
+    $("#dragonpiccontainer").css('visibility', 'hidden');
 
+    dragonBall1 = Math.floor(Math.random() * 12) + 1;
+    // console.log(dragonBall1);
 
     dragonBall2 = Math.floor(Math.random() * 12) + 1;
-    console.log(dragonBall2);
-
+    // console.log(dragonBall2);
 
     dragonBall3 = Math.floor(Math.random() * 12) + 1;
-    console.log(dragonBall3);
-
+    // console.log(dragonBall3);
 
     dragonBall4 = Math.floor(Math.random() * 12) + 1;
-    console.log(dragonBall4);
-
-    reset();
-
+    // console.log(dragonBall4);
 }
 
 //Compare yourPoints w/ computerNumber
-function compareScore(number1, number2){ 
-    if (number1 == number2){
+function compareScore(yourPoints, computerNumber){ 
+    if (yourPoints == computerNumber){
         wins++; //Add to wins if yourPoints and computerNumber are the same, reset, then call functions 
         $("#myWins").text(wins);
+        $("#dragonpiccontainer").css('visibility', 'visible');
         reset();
         startGame();
         generateComputerNumber();
         alert('You won');
-    }else if(number1 > number2){
+    }else if(yourPoints > computerNumber){
         losses++;
         $("#myLosses").text(losses);
         reset();
@@ -64,13 +63,11 @@ function compareScore(number1, number2){
     }
 }
 
-$(document).ready(function() {
-    
+$(document).ready(function() {   
     //Calling to generate #'s for dragon Balls and computer number
     startGame();
     generateComputerNumber();
-
-  
+    // $("#dragonpiccontainer").css('visibility', 'hidden');
 
 //When click on ball, it adds to your total score
     $("#ballscontainer").on("click", "#ball1", function() {
