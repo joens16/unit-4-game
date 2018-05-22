@@ -14,7 +14,7 @@ var dragonBall4 = 0;
 function generateComputerNumber(){
     computerNumber = Math.floor(Math.random() * 101) + 19;
     $("#target").text(computerNumber);
-    // $("#dragonpiccontainer").css('visibility', 'hidden');
+    $("#dragonpiccontainer").css('visibility', 'hidden');
 }
 
 //Reset game and update HTML
@@ -48,18 +48,18 @@ function compareScore(yourPoints, computerNumber){
     if (yourPoints == computerNumber){
         wins++; //Add to wins if yourPoints and computerNumber are the same, reset, then call functions 
         $("#myWins").text(wins);
-        $("#dragonpiccontainer").css('visibility', 'visible');
         reset();
         startGame();
         generateComputerNumber();
-        alert('You won');
+        alert('You won. Say hello to the Dragon!');
+        $("#dragonpiccontainer").css('visibility', 'visible');
     }else if(yourPoints > computerNumber){
         losses++;
         $("#myLosses").text(losses);
         reset();
         startGame();
         generateComputerNumber();
-        alert('You lost');
+        alert('You lost, Dragon will go to sleep now! ZzZZzzZ');
     }
 }
 

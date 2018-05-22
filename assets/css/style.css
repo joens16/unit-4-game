@@ -5,10 +5,12 @@
     padding-top: 5px;
     margin-top: 0;
     border: 5px white;
+    height: 110px;
 }
 
 #dragon-to-life {
     color: green;
+    margin-bottom: 5px;
 }
 
 #ballscontainer {
